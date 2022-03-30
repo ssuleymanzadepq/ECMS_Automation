@@ -10,6 +10,8 @@ import utils.CommonMethods;
 @CucumberOptions(
         features = "src/test/resources/features/",
         glue = "steps",
+        //when dry run set to true, it stops the actual execution and check for the step definition
+
         dryRun = false,
         monochrome = true,
         tags = "@outline",

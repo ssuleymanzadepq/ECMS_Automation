@@ -14,6 +14,6 @@ public class SearchItemPageSteps extends CommonMethods {
     @When("user clicks on search button")
     public void user_clicks_on_search_button() throws InterruptedException {
         System.out.println("Operation is done in previous step");
-        Thread.sleep(5000);
+        Thread.sleep(1000);
     }
 }

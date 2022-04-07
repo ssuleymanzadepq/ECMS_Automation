@@ -1,9 +1,13 @@
-C:\Users\SSuleyma\IdeaProjects\ECMS\src\test\java\utils\ConfigReader.java
 C:\Users\SSuleyma\IdeaProjects\ECMS\src\test\java\steps\Hooks.java
 C:\Users\SSuleyma\IdeaProjects\ECMS\src\test\java\utils\CommonMethods.java
 C:\Users\SSuleyma\IdeaProjects\ECMS\src\test\java\pages\ECMSLoginPage.java
+C:\Users\SSuleyma\IdeaProjects\ECMS\src\test\java\pages\SearchItemPage.java
+C:\Users\SSuleyma\IdeaProjects\ECMS\src\test\java\pages\ResultsPage.java
+C:\Users\SSuleyma\IdeaProjects\ECMS\src\test\java\steps\ResultPageSteps.java
+C:\Users\SSuleyma\IdeaProjects\ECMS\src\test\java\utils\ConfigReader.java
 C:\Users\SSuleyma\IdeaProjects\ECMS\src\test\java\utils\ExcelReader.java
 C:\Users\SSuleyma\IdeaProjects\ECMS\src\test\java\runners\Smoke.java
 C:\Users\SSuleyma\IdeaProjects\ECMS\src\test\java\steps\LoginSteps.java
 C:\Users\SSuleyma\IdeaProjects\ECMS\src\test\java\steps\PageInitializer.java
+C:\Users\SSuleyma\IdeaProjects\ECMS\src\test\java\steps\SearchItemPageSteps.java
 C:\Users\SSuleyma\IdeaProjects\ECMS\src\test\java\utils\Constants.java

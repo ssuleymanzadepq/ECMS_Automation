@@ -11,10 +11,9 @@ import utils.CommonMethods;
         features = "src/test/resources/features/",
         glue = "steps",
         //when dry run set to true, it stops the actual execution and check for the step definition
-
         dryRun = false,
         monochrome = true,
-        tags = "@outline",
+        tags = "@test1",
         plugin = {"pretty", "html:target/cucumber.html",
         "json:target/cucumber.json",
         "rerun:target/failed.txt"}

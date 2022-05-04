@@ -25,7 +25,7 @@ Feature: Search item in the search bar
       | test_DISS Editorial           | 1234     |
       | test_books_editorial          | 1234     |
 
-  @test1 @regression
+  @test1 @regression @smoke
   Scenario: Verify and validate facets in the left panel
     When user enters username and password for login
     And user clicks on login button

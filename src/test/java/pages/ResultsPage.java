@@ -7,6 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utils.CommonMethods;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ResultsPage extends CommonMethods {
@@ -17,6 +18,9 @@ public class ResultsPage extends CommonMethods {
 
     @FindBy(xpath="//div[@class='facet-list-container ng-tns-c130-24']/div/div/span")
     public List<WebElement> listOfFacets;
+
+    @FindBy(xpath="//div[@class='ag-center-cols-container']/div")
+    public List<WebElement> listOfSearchItems;
 
 
     @FindBy(xpath="//*[@id='disciplines']/div/span")
@@ -73,6 +77,47 @@ public class ResultsPage extends CommonMethods {
 
     @FindBy(xpath="//*[@id='bundle_code']/div/span")
     public WebElement bundleCodes;
+
+
+    @FindBy(xpath="//*[@id='total-pages-toolbar-display']")
+    public WebElement numbersOfResults;
+
+    @FindBy(xpath="//*[@id='document-set-count']")
+    public WebElement documentSetField;
+
+    @FindBy(xpath="//*[@id='items-per-page']")
+    public WebElement itemsPerPageField;
+
+    @FindBy(xpath="//*[@title='Bulk Edit']")
+    public WebElement bulkEditOption;
+
+    @FindBy(xpath="//*[@title='Clear Set']")
+    public WebElement clearSetField;
+
+    @FindBy(xpath="//*[@title='Clear Sorts']")
+    public WebElement clearSortField;
+
+    @FindBy(xpath="//*[@title='Export']")
+    public WebElement exportField;
+
+    @FindBy(xpath="//*[@title='Auto Fit Columns']")
+    public WebElement autoFitColumns;
+
+    @FindBy(xpath="//*[@title='Auto Fit Table']")
+    public WebElement autoFitTableField;
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -144,6 +189,24 @@ public class ResultsPage extends CommonMethods {
 
         String bundleCodesVal = bundleCodes.getText();
         Assert.assertTrue(bundleCodesVal.equals("Bundle Codes"));
+
+        String resultValue = numbersOfResults.getText();
+        System.out.println(resultValue);
+        Assert.assertTrue(numbersOfResults.isDisplayed());
+        Assert.assertTrue(documentSetField.isDisplayed());
+        Assert.assertTrue(itemsPerPageField.isDisplayed());
+        Assert.assertTrue(bulkEditOption.isDisplayed());
+        Assert.assertTrue(clearSetField.isDisplayed());
+        Assert.assertTrue(clearSortField.isDisplayed());
+        Assert.assertTrue(autoFitColumns.isDisplayed());
+        Assert.assertTrue(autoFitTableField.isDisplayed());
+        Assert.assertTrue(exportField.isDisplayed());
+
+        List<String> listOfItems = new ArrayList<>();
+        for(WebElement ele : listOfSearchItems){
+            listOfItems.add(ele.getText());
+        }
+        System.out.println(listOfItems);
 
     }
 

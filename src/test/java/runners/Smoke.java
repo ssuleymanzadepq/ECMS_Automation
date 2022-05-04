@@ -2,9 +2,8 @@ package runners;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
-import net.bytebuddy.implementation.bind.annotation.RuntimeType;
 import org.junit.runner.RunWith;
-import utils.CommonMethods;
+
 
 @RunWith(Cucumber.class)
 @CucumberOptions(

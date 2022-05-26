@@ -7,7 +7,8 @@ public class SearchItemPageSteps extends CommonMethods {
 
     @When("user search for the {string} in search field")
     public void user_search_for_the_in_search_field(String item) {
-       search.verifyAndSearchItem(item);
+
+        search.verifyAndSearchItem(item);
     }
 
 

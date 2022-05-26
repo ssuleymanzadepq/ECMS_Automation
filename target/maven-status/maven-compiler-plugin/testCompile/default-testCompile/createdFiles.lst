@@ -1,9 +1,0 @@
-steps\LoginSteps.class
-utils\Constants.class
-utils\ExcelReader.class
-utils\ConfigReader.class
-utils\CommonMethods.class
-runners\Smoke.class
-pages\ECMSLoginPage.class
-steps\Hooks.class
-steps\PageInitializer.class

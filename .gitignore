@@ -1,0 +1,29 @@
+### Intellij
+**/.idea/*
+*.iml
+
+*.eml
+
+### Maven
+log/
+target/
+
+### Java
+*.class
+*.jar
+*.war
+*.ear
+
+### Eclipse
+.classpath
+.project
+.settings/
+*.pydevproject
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+.metadata
+/Runtime/Runtime.iml
+Indexing/

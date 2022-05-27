@@ -40,10 +40,8 @@ public class LoginSteps extends CommonMethods {
     @When("user enters credentials from excel file using {string} and logged in")
     public void user_enters_credentials_from_excel_file_using_and_logged_in(String sheetName) {
         List<Map<String, String>> newLogin = ExcelReader.excelIntoListMap(Constants.TESTDATA_FILEPATH, sheetName);
-        Iterator<Map<String, String>> itr = newLogin.iterator();
 
-        while(itr.hasNext()){
-            Map<String, String> loginUser = itr.next();
+        for (Map<String, String> loginUser : newLogin) {
             sendText(login.loginTextFieldUsername, loginUser.get("username"));
             sendText(login.loginTextFieldPassword, loginUser.get("password"));
             click(login.signInButton);

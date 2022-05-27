@@ -193,7 +193,7 @@ public class ResultsPage extends CommonMethods {
 
 
         String bundleCodesVal = bundleCodes.getText();
-        Assert.assertTrue(bundleCodesVal.equals("Bundle Codes"));
+        Assert.assertEquals("Bundle Codes", bundleCodesVal);
 
         String resultValue = numbersOfResults.getText();
         System.out.println(resultValue);

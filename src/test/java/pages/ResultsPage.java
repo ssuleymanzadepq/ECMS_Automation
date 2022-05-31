@@ -1,6 +1,5 @@
 package pages;
 
-import com.sun.javaws.jnl.RContentDesc;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -21,6 +20,9 @@ public class ResultsPage extends CommonMethods {
 
     @FindBy(xpath = "//div[@class='ag-center-cols-container']/div")
     public List<WebElement> listOfSearchItems;
+
+    @FindBy(xpath = "(//div[@class='ag-center-cols-container']/div/div[3])[1]")
+    public WebElement firstItemInTheList;
 
 
     @FindBy(xpath = "//*[@id='disciplines']/div/span")
@@ -211,8 +213,15 @@ public class ResultsPage extends CommonMethods {
         for (WebElement ele : listOfSearchItems) {
             listOfItems.add(ele.getText());
         }
-        System.out.println(listOfItems);
+       // System.out.println(listOfItems);
 
+        System.out.println("Code tested correct");
+    }
+
+    public void clickOnFirstResult(){
+        if(firstItemInTheList.isDisplayed()){
+            firstItemInTheList.click();
+        }
     }
 
 }

@@ -25,7 +25,7 @@ Feature: Search item in the search bar
       | test_DISS Editorial           | 1234     |
       | test_books_editorial          | 1234     |
 
-  @test1 @regression @smoke
+  @test @regression @smoke
   Scenario: Verify and validate facets in the left panel
     When user enters username and password for login
     And user clicks on login button
@@ -34,6 +34,21 @@ Feature: Search item in the search bar
     And user clicks on search button
     Then user verifies left panel facets
       | Disciplines | Products | Abstract | Full Text | Publication Source Type | Document Type | Document Section | Term Count | PQ One Business | Providers | Publishers | Database Type | Document Status | MR3 Fields | Active Restrictions | Publication Subjects | Content Tier | Bundle Codes|
+
+
+
+  @test1 @regression @smoke
+  Scenario: Verify fields and options in searched result details
+    When user enters username and password for login
+    And user clicks on login button
+    Then user navigated to homepage
+    When user search for the "water" in search field
+    And user clicks on search button
+    Then user verifies left panel facets
+      | Disciplines | Products | Abstract | Full Text | Publication Source Type | Document Type | Document Section | Term Count | PQ One Business | Providers | Publishers | Database Type | Document Status | MR3 Fields | Active Restrictions | Publication Subjects | Content Tier | Bundle Codes|
+    When user clicks on one of the results from the list of results
+    Then user verify the result details page
+
 
 
 

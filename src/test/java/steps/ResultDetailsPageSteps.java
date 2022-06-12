@@ -17,5 +17,14 @@ public class ResultDetailsPageSteps extends CommonMethods {
         Thread.sleep(3000);
         System.out.println("Test");
         details.verifyTitleBar();
+        details.verifyFieldedView();
+        details.verifyRawXml();
+        details.verifyAddNew();
+        details.verifyAddAnother();
+        details.verifyArticleUrl();
+        details.verifyDocumentsTypeField();
+        details.verifyDocumentsLangField();
+        details.verifyContributorsField();
+
     }
 }

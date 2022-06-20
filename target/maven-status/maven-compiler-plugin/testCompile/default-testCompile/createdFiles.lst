@@ -1,5 +1,4 @@
 steps\LoginSteps.class
-steps\ResultPageSteps.class
 utils\Constants.class
 pages\ResultsPage.class
 pages\SearchItemPage.class
@@ -9,8 +8,9 @@ runners\Regression.class
 utils\CommonMethods.class
 runners\Smoke.class
 pages\ECMSLoginPage.class
-pages\ResultDetailsPage.class
-steps\ResultDetailsPageSteps.class
 steps\SearchItemPageSteps.class
+steps\DocumentViewPageSteps.class
 steps\Hooks.class
 steps\PageInitializer.class
+pages\DocumentPage.class
+steps\DocumentPageSteps.class

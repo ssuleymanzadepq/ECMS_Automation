@@ -1,4 +1,15 @@
 -------------------------------------------------------------------------------
 Test set: runners.Smoke
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 25.025 s - in runners.Smoke
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 35.986 s <<< FAILURE! - in runners.Smoke
+Search item in the search bar.Verify fields and options in searched result details  Time elapsed: 34.106 s  <<< ERROR!
+io.cucumber.junit.UndefinedStepException: 
+The step "user verify the document page" is undefined. You can implement it using the snippet(s) below:
+
+@Then("user verify the document page")
+public void user_verify_the_document_page() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+

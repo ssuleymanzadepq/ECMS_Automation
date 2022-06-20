@@ -6,10 +6,10 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utils.CommonMethods;
 
-public class ResultDetailsPage extends CommonMethods {
+public class DocumentPage extends CommonMethods {
 
     @FindBy(xpath = "//*[@class='title-display']")
-    public WebElement titleResults;
+    public WebElement documentMainTitle;
 
     @FindBy(xpath= "//*[@id='fielded']")
     public WebElement fieldedView;
@@ -37,13 +37,11 @@ public class ResultDetailsPage extends CommonMethods {
 
 
 
-    public ResultDetailsPage(){
+    public DocumentPage(){
         PageFactory.initElements(driver, this);
     }
 
-    public void verifyTitleBar(){
-        Assert.assertTrue(titleResults.isDisplayed());
-    }
+    public void verifyDocumentMainTitle(){Assert.assertTrue(documentMainTitle.isDisplayed());}
 
     public void verifyFieldedView(){
         Assert.assertTrue(fieldedView.isDisplayed());

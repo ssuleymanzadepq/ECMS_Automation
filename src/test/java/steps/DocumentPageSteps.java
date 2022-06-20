@@ -8,7 +8,7 @@ import utils.CommonMethods;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ResultPageSteps extends CommonMethods {
+public class DocumentPageSteps extends CommonMethods {
 
     @Then("user verifies the items shown in the list")
     public void user_verifies_the_items_shown_in_the_list() {

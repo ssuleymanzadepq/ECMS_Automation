@@ -47,7 +47,7 @@ Feature: Search item in the search bar
     Then user verifies left panel facets
       | Disciplines | Products | Abstract | Full Text | Publication Source Type | Document Type | Document Section | Term Count | PQ One Business | Providers | Publishers | Database Type | Document Status | MR3 Fields | Active Restrictions | Publication Subjects | Content Tier | Bundle Codes|
     When user clicks on one of the results from the list of results
-    Then user verify the result details page
+    Then user verify the document page
 
 
 

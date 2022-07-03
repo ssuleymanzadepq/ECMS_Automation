@@ -20,5 +20,13 @@ Scenario: Passing data from excel file
       | test_DISS Editorial           | 1234     |
       | test_books_editorial          | 1234     |
 
+@test123
+  Scenario: Verify message which browser to use
+    When user is on login page
+    Then user should be able to see message "Which browser is best to use?"
 
+  @test123
+  Scenario: Verify message which browser to use
+    When user is on login page
+    Then user should be able to see forgot password link
 

@@ -51,6 +51,13 @@ Feature: Search item in the search bar
 
 
 
+    @test123
+  Scenario: Verify reporting dropdown
+    When user enters username and password for login
+    And user clicks on login button
+    Then user navigated to homepage
+    When user clicks on reporting dropdown
+    Then user should be able to see all the reporting options
 
 
 

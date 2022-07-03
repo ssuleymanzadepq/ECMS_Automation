@@ -3,6 +3,7 @@ package steps;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
 import utils.CommonMethods;
 import utils.ConfigReader;
 import utils.Constants;
@@ -53,6 +54,26 @@ public class LoginSteps extends CommonMethods {
         sendText(login.loginTextFieldUsername, username);
         sendText(login.loginTextFieldPassword, password);
         click(login.signInButton);
+    }
+
+    @When("user is on login page")
+    public void user_is_on_login_page() {
+        String text = login.signInMessage.getText();
+        Assert.assertEquals(text, "Please sign in");
+    }
+
+    @Then("user should be able to see message {string}")
+    public void user_should_be_able_to_see_message(String message) {
+       String browserText = login.browsernMessage.getText();
+       Assert.assertEquals(browserText, message);
+    }
+
+    @Then("user should be able to see forgot password link")
+    public void user_should_be_able_to_see_forgot_password_link() {
+        Assert.assertTrue(login.forgotPasswordLink.isDisplayed());
+        String text = login.forgotPasswordLink.getText();
+        Assert.assertEquals(text, "Forgot password");
+        click(login.forgotPasswordLink);
     }
 
 }

@@ -18,6 +18,15 @@ public class ECMSLoginPage extends CommonMethods {
     @FindBy(id="signinButton")
     public WebElement signInButton;
 
+    @FindBy(xpath = "//*[text()='Please sign in']")
+    public WebElement signInMessage;
+
+    @FindBy(xpath = "//*[text()='Which browser is best to use?']")
+    public WebElement browsernMessage;
+
+    @FindBy(xpath = "//*[text()='Forgot password']")
+    public WebElement forgotPasswordLink;
+
 
     public ECMSLoginPage(){
         PageFactory.initElements(driver, this);

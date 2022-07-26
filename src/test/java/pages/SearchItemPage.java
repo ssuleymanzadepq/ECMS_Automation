@@ -29,6 +29,12 @@ public class SearchItemPage extends CommonMethods {
     @FindBy(xpath="//*[text()=' Status Report Help']")
     public WebElement statusReportHelp;
 
+    @FindBy(xpath="//*[text()='Batch Queues']")
+    public WebElement batchQueues;
+
+
+
+
     public SearchItemPage(){
         PageFactory.initElements(driver, this);
     }
@@ -50,5 +56,12 @@ public class SearchItemPage extends CommonMethods {
         Assert.assertTrue(termReportHelp.isDisplayed());
         Assert.assertTrue(statusReportHelp.isDisplayed());
     }
+
+    public void clickOnBatchQueueOption(){
+        Assert.assertTrue(batchQueues.isDisplayed());
+        click(batchQueues);
+    }
+
+
 }
 

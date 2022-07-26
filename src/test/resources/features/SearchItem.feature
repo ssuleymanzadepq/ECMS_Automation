@@ -51,13 +51,41 @@ Feature: Search item in the search bar
 
 
 
-    @test123
+    @test123 @regression @@C766477
   Scenario: Verify reporting dropdown
     When user enters username and password for login
     And user clicks on login button
     Then user navigated to homepage
     When user clicks on reporting dropdown
     Then user should be able to see all the reporting options
+
+   @regression @C766479
+  Scenario: Verify and validate batch queues option
+     When user enters username and password for login
+     And user clicks on login button
+     When user clicks on batch queue option
+     Then user should be able to see batch queue options on page
+
+  @regression @C766480
+  Scenario: Verify and validate batch queues option
+    When user enters username and password for login
+    And user clicks on login button
+    When user clicks on batch queue option
+    Then user should be able to see batch queue options on page
+    Then user verify process details options on batch queue page
+
+
+
+  @regression @C766481
+  Scenario: Verify and validate reporting dropdown option
+    When user enters username and password for login
+    And user clicks on login button
+    When user clicks on reporting dropdown
+    Then user should be able to see all the reporting options
+    When user clicks on provisional reports option
+    And user selects date from calendar
+    And user clicks on download option
+    #Then user verify error message or downloaded report
 
 
 

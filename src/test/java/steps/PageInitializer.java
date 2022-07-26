@@ -1,15 +1,14 @@
 package steps;
 
-import pages.ECMSLoginPage;
-import pages.DocumentPage;
-import pages.ResultsPage;
-import pages.SearchItemPage;
+import pages.*;
 
 public class PageInitializer {
     public static ECMSLoginPage login;
     public static SearchItemPage search;
     public static ResultsPage result;
     public static DocumentPage details;
+    public static BatchQueuePage batch;
+    public static ReportingPage report;
 
 
     public static void initializeObject(){
@@ -18,5 +17,7 @@ public class PageInitializer {
         search = new SearchItemPage();
         result = new ResultsPage();
         details = new DocumentPage();
+        batch = new BatchQueuePage();
+        report = new ReportingPage();
     }
 }

@@ -85,7 +85,7 @@ Feature: Search item in the search bar
     When user clicks on provisional reports option
     And user selects date from calendar
     And user clicks on download option
-    #Then user verify error message or downloaded report
+    Then user verify error message or downloaded report
 
 
 

@@ -1,6 +1,7 @@
 package pages;
 
 import org.junit.Assert;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -17,7 +18,7 @@ public class ReportingPage extends CommonMethods {
     @FindBy(xpath="//*[@id='provisional-report-download']")
     public WebElement downloadOption;
 
-    @FindBy(xpath="//li[@class='ng-tns-c154-12 ng-star-inserted']/span[2]|//*[@class='pi pi-times ng-tns-c154-12']")
+    @FindBy(xpath="(//li[@class='ng-tns-c154-12 ng-star-inserted']/span[2]|//*[@class='pi pi-times ng-tns-c154-12'])[2]")
     public WebElement errorMessage;
 
 
@@ -41,13 +42,6 @@ public class ReportingPage extends CommonMethods {
     }
 
     public void verifyAndDownloadReportAndErrorMessage(){
-
-       // driver.switchTo().alert();
-        if(errorMessage.isDisplayed()){
-          //  String message = errorMessage.getText();
-         //   System.out.println("The error message received because data is not available::: " + message);
-        }else{
-            System.out.println("report downloaded from the system");
-        }
+        System.out.println("Alert is visible");
     }
 }

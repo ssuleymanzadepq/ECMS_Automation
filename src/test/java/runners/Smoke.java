@@ -14,8 +14,8 @@ import org.junit.runner.RunWith;
         monochrome = true,
         tags = "@C766481",
         plugin = {"pretty", "html:target/cucumber.html",
-        "json:target/cucumber.json",
-        "rerun:target/failed.txt"}
+                "json:target/cucumber.json",
+                "rerun:target/failed.txt"}
 )
 
 public class Smoke {

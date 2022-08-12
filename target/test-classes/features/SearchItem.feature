@@ -37,7 +37,7 @@ Feature: Search item in the search bar
 
 
 
-  @test1 @regression @smoke
+  @test1 @regression @smoke @C766484
   Scenario: Verify fields and options in searched result details
     When user enters username and password for login
     And user clicks on login button
@@ -51,7 +51,7 @@ Feature: Search item in the search bar
 
 
 
-    @test123 @regression @@C766477
+    @test123 @regression @C766477
   Scenario: Verify reporting dropdown
     When user enters username and password for login
     And user clicks on login button
@@ -88,8 +88,23 @@ Feature: Search item in the search bar
     Then user verify error message or downloaded report
 
 
+  @regression @C766487
+  Scenario: Verify and validate reporting dropdown option
+    When user enters username and password for login
+    And user clicks on login button
+    When user clicks on reporting dropdown
+    Then user should be able to see all the reporting options
+    When user clicks on prod status report option
+    Then excel report should be downloaded
 
 
+  @test123 @regression @C766489
+  Scenario: Verify settings options
+    When user enters username and password for login
+    And user clicks on login button
+    Then user navigated to homepage
+    When user clicks on settings option
+    Then user should be able to see all the options under settings
 
 
 

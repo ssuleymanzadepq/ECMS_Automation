@@ -12,7 +12,7 @@ import org.junit.runner.RunWith;
         //when dry run set to true, it stops the actual execution and check for the step definition
         dryRun = false,
         monochrome = true,
-        tags = "@C766481",
+        tags = "@C766489",
         plugin = {"pretty", "html:target/cucumber.html",
                 "json:target/cucumber.json",
                 "rerun:target/failed.txt"}

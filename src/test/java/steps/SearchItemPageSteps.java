@@ -29,4 +29,27 @@ public class SearchItemPageSteps extends CommonMethods {
     public void user_should_be_able_to_see_all_the_reporting_options() {
         search.verifyReportingDropdownAndOptions();
     }
+
+
+    @When("user clicks on prod status report option")
+    public void user_clicks_on_prod_status_report_option() {
+       click(search.productionStatusReport);
+    }
+
+    @Then("excel report should be downloaded")
+    public void excel_report_should_be_downloaded() {
+        System.out.println("Excel report downloaded");
+    }
+
+    @When("user clicks on settings option")
+    public void user_clicks_on_settings_option() {
+       search.clickOnSettingsOption();
+    }
+
+
+    @Then("user should be able to see all the options under settings")
+    public void user_should_be_able_to_see_all_the_options_under_settings() {
+    search.verifySettingsOptions();
+    }
+
 }

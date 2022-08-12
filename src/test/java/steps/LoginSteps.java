@@ -26,7 +26,6 @@ public class LoginSteps extends CommonMethods {
         sendText(login.loginTextFieldPassword, ConfigReader.getPropertyValue("password"));
     }
 
-
     @When("user clicks on login button")
     public void user_clicks_on_login_button() {
         click(login.signInButton);

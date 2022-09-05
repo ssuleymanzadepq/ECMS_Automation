@@ -108,6 +108,22 @@ public class ResultsPage extends CommonMethods {
     @FindBy(xpath = "//*[@title='Auto Fit Table']")
     public WebElement autoFitTableField;
 
+    @FindBy(xpath = "//*[@id='next-page-toolbar-button']/i")
+    public WebElement arrowIcon;
+
+    @FindBy(xpath = "//*[@id='total-pages-toolbar-display']")
+    public WebElement numberOfResultsIcon;
+
+    @FindBy(xpath = "//*[@id='last-page-toolbar-button']/i")
+    public WebElement doubleArrowIcon;
+
+    @FindBy(xpath = " //*[@id='first-page-toolbar-button']/i")
+    public WebElement leftSideDoubleArrowIcon;
+
+
+
+
+
 
     public ResultsPage() {
         PageFactory.initElements(driver, this);
@@ -116,6 +132,51 @@ public class ResultsPage extends CommonMethods {
 
     public void verifyListOfResult() {
         Assert.assertTrue(resultItemFields.isDisplayed());
+    }
+
+    public void clickArrowIcon() throws InterruptedException {
+        String results = numbersOfResults.getText();
+        System.out.println(results);
+        Assert.assertTrue(arrowIcon.isDisplayed());
+        click(arrowIcon);
+        Thread.sleep(2000);
+        jsClick(arrowIcon);
+        Thread.sleep(2000);
+        String results2 = numbersOfResults.getText();
+        System.out.println(results2);
+        Assert.assertNotEquals(results2, results);
+    }
+
+    public void clickDoubleArrowIcon() throws InterruptedException {
+        String results = numbersOfResults.getText();
+        System.out.println(results);
+        Assert.assertTrue(arrowIcon.isDisplayed());
+       // click(arrowIcon);
+        Thread.sleep(2000);
+        jsClick(doubleArrowIcon);
+        Thread.sleep(2000);
+        String results2 = numbersOfResults.getText();
+        System.out.println(results2);
+        Assert.assertNotEquals(results2, results);
+    }
+
+    public void clickOnLeftSideDoubleArrowIcon() throws InterruptedException {
+
+        Thread.sleep(2000);
+        jsClick(doubleArrowIcon);
+        Thread.sleep(2000);
+        String results2 = numbersOfResults.getText();
+        System.out.println(results2);
+
+        jsClick(leftSideDoubleArrowIcon);
+        String results = numbersOfResults.getText();
+        Assert.assertNotEquals(results2, results);
+    }
+
+
+
+    public void verifyDifferentValues(){
+        System.out.println("Test passed");
     }
 
     public void verifyTheFacets() {

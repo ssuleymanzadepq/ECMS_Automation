@@ -52,4 +52,24 @@ public class SearchItemPageSteps extends CommonMethods {
     search.verifySettingsOptions();
     }
 
+    @When("user clicks on arrow icon")
+    public void user_clicks_on_arrow_icon() throws InterruptedException {
+       result.clickArrowIcon();
+    }
+
+    @Then("user should be able to see new values in the results")
+    public void user_should_be_able_to_see_new_values_in_the_results() {
+        result.verifyDifferentValues();
+    }
+
+    @When("user clicks on double arrow icon")
+    public void user_clicks_on_double_arrow_icon() throws InterruptedException {
+       result.clickDoubleArrowIcon();
+    }
+
+    @When("user clicks on left sided double arrow icon after clicking on right sided double arrow icon")
+    public void user_clicks_on_left_sided_double_arrow_icon_after_clicking_on_right_sided_double_arrow_icon() throws InterruptedException {
+      result.clickOnLeftSideDoubleArrowIcon();
+    }
+
 }

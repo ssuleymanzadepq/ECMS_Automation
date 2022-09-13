@@ -72,4 +72,9 @@ public class SearchItemPageSteps extends CommonMethods {
       result.clickOnLeftSideDoubleArrowIcon();
     }
 
+    @When("user selects items per page dropdown values")
+    public void user_selects_items_per_page_dropdown_values() throws InterruptedException {
+       result.selectItemsPerPageDropDown();
+    }
+
 }

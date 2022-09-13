@@ -1,9 +1,11 @@
 package pages;
 
+import io.cucumber.java.eo.Se;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
 import utils.CommonMethods;
 
 import java.util.ArrayList;
@@ -120,10 +122,19 @@ public class ResultsPage extends CommonMethods {
     @FindBy(xpath = " //*[@id='first-page-toolbar-button']/i")
     public WebElement leftSideDoubleArrowIcon;
 
+    @FindBy(xpath = "//div[@id='items-per-page']//div/select")
+    public WebElement itemsPerPageDropDown;
 
 
-
-
+    public void selectItemsPerPageDropDown() throws InterruptedException {
+        Thread.sleep(2000);
+      if(itemsPerPageDropDown.isDisplayed()){
+        Select s = new Select(itemsPerPageDropDown);
+        s.selectByValue("100");
+       // jsClick(itemsPerPageDropDown);
+    }else{
+          System.out.println("Value already selected");}
+    }
 
     public ResultsPage() {
         PageFactory.initElements(driver, this);

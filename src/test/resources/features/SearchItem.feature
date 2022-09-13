@@ -138,6 +138,16 @@ Feature: Search item in the search bar
     When user clicks on left sided double arrow icon after clicking on right sided double arrow icon
     Then user should be able to see new values in the results
 
+  @C766558 @regression
+  Scenario: Validation of search arrows and its values
+    When user enters username and password for login
+    And user clicks on login button
+    Then user navigated to homepage
+    When user search for the "water" in search field
+    And user clicks on search button
+    When user selects items per page dropdown values
+    Then user should be able to see new values in the results
+
 
 
 

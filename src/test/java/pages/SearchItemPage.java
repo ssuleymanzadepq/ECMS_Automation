@@ -59,11 +59,23 @@ public class SearchItemPage extends CommonMethods {
     @FindBy(xpath="//*[text()='Document View']")
     public WebElement docViewsettingsOption;
 
-    @FindBy(xpath="//*[text()='Bulk Edit']")
+    @FindBy(xpath="(//*[text()='Bulk Edit'])[2]")
     public WebElement bulkEditsettingsOption;
 
+    @FindBy(xpath="(//*[@role='menuitem'])[1]")
+    public WebElement fullResultsOption;
 
+    @FindBy(xpath="(//*[@role='menuitem'])[2]")
+    public WebElement documentSetOption;
 
+    @FindBy(xpath="//*[@id='AddTerms']")
+    public WebElement addButton;
+
+    @FindBy(xpath="//*[@id='DeleteTerms']")
+    public WebElement deleteButton;
+
+    @FindBy(xpath="//*[@id='ReplaceTerms']")
+    public WebElement replaceButton;
 
 
     public SearchItemPage(){
@@ -75,6 +87,23 @@ public class SearchItemPage extends CommonMethods {
         sendText(searchTextfield, item);
         click(searchButton);
     }
+
+    public void verifyAndClickfullResultsOption(){
+        Assert.assertTrue(documentSetOption.isDisplayed());
+        click(fullResultsOption);
+        Assert.assertTrue(replaceButton.isDisplayed());
+        Assert.assertTrue(deleteButton.isDisplayed());
+        Assert.assertTrue(addButton.isDisplayed());
+    }
+
+    public void verifyAndClickDocumentSetOption(){
+        click(documentSetOption);
+    }
+
+    public void verifyAndClickBulkEdit(){
+        click(bulkEditsettingsOption);
+    }
+
 
     public void clickOnReportingdropdown(){
         Assert.assertTrue(reportingDropdown.isDisplayed());

@@ -149,5 +149,18 @@ Feature: Search item in the search bar
     Then user should be able to see new values in the results
 
 
+  @C766559 @regression
+  Scenario: Validation of search arrows and its values
+    When user enters username and password for login
+    And user clicks on login button
+    Then user navigated to homepage
+    When user search for the "water" in search field
+    And user clicks on search button
+    When user clicks on bulk edit option
+    Then user should be able to see all the respective fields in it
+
+
+
+
 
 

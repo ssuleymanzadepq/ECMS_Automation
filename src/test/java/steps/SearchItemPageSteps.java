@@ -77,4 +77,17 @@ public class SearchItemPageSteps extends CommonMethods {
        result.selectItemsPerPageDropDown();
     }
 
+    @When("user clicks on bulk edit option")
+    public void user_clicks_on_bulk_edit_option() {
+       search.verifyAndClickBulkEdit();
+    }
+
+
+
+    @Then("user should be able to see all the respective fields in it")
+    public void user_should_be_able_to_see_all_the_respective_fields_in_it() {
+      search.verifyAndClickfullResultsOption();
+    }
+
+
 }

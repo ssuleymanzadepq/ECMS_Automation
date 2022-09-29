@@ -77,6 +77,14 @@ public class SearchItemPage extends CommonMethods {
     @FindBy(xpath="//*[@id='ReplaceTerms']")
     public WebElement replaceButton;
 
+    @FindBy(xpath="//*[@id='clear-set-toolbar-button']")
+    public WebElement clearSetOption;
+
+    @FindBy(xpath="//*[text()='Clear Sorts']")
+    public WebElement clearSortOption;
+
+
+
 
     public SearchItemPage(){
         PageFactory.initElements(driver, this);
@@ -137,6 +145,16 @@ public class SearchItemPage extends CommonMethods {
         Assert.assertTrue(docViewsettingsOption.isDisplayed());
         Assert.assertTrue(NoOfResultsettingsOption.isDisplayed());
         Assert.assertTrue(filtersettingsOption.isDisplayed());
+    }
+
+    public void verifyClearSetOption(){
+        Assert.assertTrue(clearSetOption.isEnabled());
+        Assert.assertTrue(clearSetOption.isDisplayed());
+    }
+
+    public void verifyClearSortOption(){
+        Assert.assertTrue(clearSortOption.isEnabled());
+        Assert.assertTrue(clearSortOption.isDisplayed());
     }
 
 

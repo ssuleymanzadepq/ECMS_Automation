@@ -89,5 +89,16 @@ public class SearchItemPageSteps extends CommonMethods {
       search.verifyAndClickfullResultsOption();
     }
 
+    @Then("user should be able to work with clear set option")
+    public void user_should_be_able_to_work_with_clear_set_option() {
+       search.verifyClearSetOption();
+    }
+
+    @Then("user should be able to work with clear sort option")
+    public void user_should_be_able_to_work_with_clear_sort_option() {
+      search.verifyClearSortOption();
+
+    }
+
 
 }

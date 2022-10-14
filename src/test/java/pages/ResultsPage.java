@@ -125,6 +125,17 @@ public class ResultsPage extends CommonMethods {
     @FindBy(xpath = "//div[@id='items-per-page']//div/select")
     public WebElement itemsPerPageDropDown;
 
+    @FindBy(xpath = "//*[text()='Send']")
+    public WebElement sendOptionExportField;
+
+    @FindBy(xpath = "//*[text()='Cancel']")
+    public WebElement cancelOptionExportField;
+
+    @FindBy(xpath = "//*[text()=' Send Excel file to ']")
+    public WebElement sendExcelFileOptionExportField;
+
+
+
 
     public void selectItemsPerPageDropDown() throws InterruptedException {
         Thread.sleep(2000);
@@ -295,5 +306,18 @@ public class ResultsPage extends CommonMethods {
             firstItemInTheList.click();
         }
     }
+
+    public void clickExportField(){
+        if(exportField.isDisplayed()){
+            exportField.click();
+        }
+    }
+
+    public void verifyExportPopUpOptions () {
+        Assert.assertTrue(sendOptionExportField.isDisplayed());
+        Assert.assertTrue(cancelOptionExportField.isDisplayed());
+        Assert.assertTrue(sendExcelFileOptionExportField.isDisplayed());
+    }
+
 
 }

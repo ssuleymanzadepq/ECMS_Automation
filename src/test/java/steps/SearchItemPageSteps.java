@@ -100,5 +100,14 @@ public class SearchItemPageSteps extends CommonMethods {
 
     }
 
+    @When("user clicks on export option")
+    public void user_clicks_on_export_option() {
+        result.clickExportField();
+    }
+
+    @Then("user should be able to see send and cancel option")
+    public void user_should_be_able_to_see_send_and_cancel_option() {
+       result.verifyExportPopUpOptions();
+    }
 
 }

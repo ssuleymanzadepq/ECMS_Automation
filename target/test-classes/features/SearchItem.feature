@@ -179,6 +179,17 @@ Feature: Search item in the search bar
     Then user should be able to work with clear sort option
 
 
+  @C766562 @regression
+  Scenario: Validation of export option
+    When user enters username and password for login
+    And user clicks on login button
+    Then user navigated to homepage
+    When user search for the "water" in search field
+    And user clicks on search button
+    When user clicks on export option
+    Then user should be able to see send and cancel option
+
+
 
 
 

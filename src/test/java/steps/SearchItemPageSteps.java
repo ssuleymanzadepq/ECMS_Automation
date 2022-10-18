@@ -110,4 +110,20 @@ public class SearchItemPageSteps extends CommonMethods {
        result.verifyExportPopUpOptions();
     }
 
+    @Then("user should be able to validate autofit column options")
+    public void user_should_be_able_to_validate_autofit_column_options() {
+       result.verifyAndClickAAutoFitColumn();
+    }
+
+    @When("user enters invalid value in corp field")
+    public void user_enters_invalid_value_in_corp_field() {
+    details.verifyCorpHeading();
+    }
+
+
+    @Then("user should be able to see error message")
+    public void user_should_be_able_to_see_error_message() {
+       details.verifyCorpSearchButton();
+    }
+
 }

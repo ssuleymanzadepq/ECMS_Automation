@@ -36,6 +36,16 @@ public class DocumentPage extends CommonMethods {
     public WebElement contributorsField;
 
 
+    @FindBy(xpath = "//*[text()='CORP (Terms)']")
+    public WebElement corpItemsHeading;
+
+    @FindBy(xpath = "//*[@id='term-CORP-0']")
+    public WebElement corpItemTextField;
+
+    @FindBy(xpath = "//*[@class='input-group-text term-actions ng-tns-c231-85 ng-star-inserted']/i")
+    public WebElement searchButtonCorp;
+
+
 
     public DocumentPage(){
         PageFactory.initElements(driver, this);
@@ -79,13 +89,16 @@ public class DocumentPage extends CommonMethods {
 
 
 
+    public void verifyCorpHeading(){
+        Assert.assertTrue(corpItemsHeading.isDisplayed());
+        Assert.assertTrue(corpItemTextField.isDisplayed());
+        sendText(corpItemsHeading, "vvbbcdd");
+    }
 
 
+    public void verifyCorpSearchButton() {
+        Assert.assertTrue(searchButtonCorp.isDisplayed());
+        click(searchButtonCorp);
 
-
-
-
-
-
-
+    }
 }

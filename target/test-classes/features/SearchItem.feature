@@ -191,6 +191,29 @@ Feature: Search item in the search bar
 
 
 
+  @C766563 @regression
+  Scenario: Validation of autofit columns
+    When user enters username and password for login
+    And user clicks on login button
+    Then user navigated to homepage
+    When user search for the "water" in search field
+    And user clicks on search button
+    Then user should be able to validate autofit column options
+
+  @test1 @regression @smoke @C766564
+  Scenario: Verify fields and options in searched result details
+    When user enters username and password for login
+    And user clicks on login button
+    Then user navigated to homepage
+    When user search for the "water" in search field
+    And user clicks on search button
+    Then user verifies left panel facets
+      | Disciplines | Products | Abstract | Full Text | Publication Source Type | Document Type | Document Section | Term Count | PQ One Business | Providers | Publishers | Database Type | Document Status | MR3 Fields | Active Restrictions | Publication Subjects | Content Tier | Bundle Codes|
+    When user clicks on one of the results from the list of results
+    When user enters invalid value in corp field
+    Then user should be able to see error message
+
+
 
 
 

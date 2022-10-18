@@ -135,6 +135,16 @@ public class ResultsPage extends CommonMethods {
     public WebElement sendExcelFileOptionExportField;
 
 
+    @FindBy(xpath = "//*[text()='Auto Fit Columns']")
+    public WebElement autoFitColumnOption;
+
+
+
+
+public void verifyAndClickAAutoFitColumn(){
+    Assert.assertTrue(autoFitColumns.isDisplayed());
+    click(autoFitColumns);
+}
 
 
     public void selectItemsPerPageDropDown() throws InterruptedException {

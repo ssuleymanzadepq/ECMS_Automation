@@ -9,10 +9,9 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/features/",
         glue = "steps",
-        //when dry run set to true, it stops the actual execution and check for the step definition
         dryRun = false,
         monochrome = true,
-        tags = "@C766563",
+        tags = "@C766564",
         plugin = {"pretty", "html:target/cucumber.html",
                 "json:target/cucumber.json",
                 "rerun:target/failed.txt"}

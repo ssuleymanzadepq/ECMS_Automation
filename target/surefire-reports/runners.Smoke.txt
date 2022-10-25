@@ -1,4 +1,14 @@
 -------------------------------------------------------------------------------
 Test set: runners.Smoke
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 24.66 s - in runners.Smoke
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 24.834 s <<< FAILURE! - in runners.Smoke
+Search item in the search bar.Validation and Verification of Provisional Terms  Time elapsed: 23.926 s  <<< ERROR!
+org.openqa.selenium.InvalidElementStateException: 
+invalid element state
+  (Session info: chrome=106.0.5249.119)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'CLVITN-H0W4FB3', ip: '192.168.1.186', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 106.0.5249.119, chrome: {chromedriverVersion: 106.0.5249.61 (511755355844..., userDataDir: C:\Users\U6065476\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:55489}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: eb74b99bc4b02be34fa260f99c92e90c
+

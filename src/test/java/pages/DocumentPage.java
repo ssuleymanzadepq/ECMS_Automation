@@ -1,6 +1,8 @@
 package pages;
 
 import org.junit.Assert;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -42,10 +44,8 @@ public class DocumentPage extends CommonMethods {
     @FindBy(xpath = "//*[@id='term-CORP-0']")
     public WebElement corpItemTextField;
 
-    @FindBy(xpath = "//*[@class='input-group-text term-actions ng-tns-c231-85 ng-star-inserted']/i")
+    @FindBy(xpath = "//*[@class='input-group-text term-actions ng-tns-c231-141 ng-star-inserted']/i")
     public WebElement searchButtonCorp;
-
-
 
     public DocumentPage(){
         PageFactory.initElements(driver, this);
@@ -90,15 +90,18 @@ public class DocumentPage extends CommonMethods {
 
 
     public void verifyCorpHeading(){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0,1000)");
         Assert.assertTrue(corpItemsHeading.isDisplayed());
         Assert.assertTrue(corpItemTextField.isDisplayed());
-        sendText(corpItemsHeading, "vvbbcdd");
+        sendText(corpItemTextField, "vvbbcdd");
+        corpItemTextField.sendKeys(Keys.ENTER);
     }
 
 
     public void verifyCorpSearchButton() {
-        Assert.assertTrue(searchButtonCorp.isDisplayed());
-        click(searchButtonCorp);
+       // Assert.assertTrue(searchButtonCorp.isDisplayed());
+       // click(searchButtonCorp);
 
     }
 }

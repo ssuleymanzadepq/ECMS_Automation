@@ -23,9 +23,8 @@ public class ResultsPage extends CommonMethods {
     @FindBy(xpath = "//div[@class='ag-center-cols-container']/div")
     public List<WebElement> listOfSearchItems;
 
-    @FindBy(xpath = "(//div[@class='ag-center-cols-container']/div/div[3])[2]|(//div[@class='ag-center-cols-container']/div/div[3])[2]")
+    @FindBy(xpath = "(//div[@class='ag-center-cols-container']/div/div[3])[3]|(//div[@class='ag-center-cols-container']/div/div[3])[2]")
     public WebElement firstItemInTheList;
-
 
     @FindBy(xpath = "//*[@id='disciplines']/div/span")
     public WebElement disciplinesTab;

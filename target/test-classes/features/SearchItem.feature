@@ -200,8 +200,10 @@ Feature: Search item in the search bar
     And user clicks on search button
     Then user should be able to validate autofit column options
 
-  @test1 @regression @smoke @C766564
-  Scenario: Verify fields and options in searched result details
+
+
+  @regression @C766564
+  Scenario: Validation and Verification of Provisional Terms
     When user enters username and password for login
     And user clicks on login button
     Then user navigated to homepage
